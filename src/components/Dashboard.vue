@@ -55,48 +55,48 @@ export default {
 </script>
 
 <style scoped>
-/* Main dashboard layout - centered content */
+/* Metro Vancouver inspired dashboard container */
 .dashboard-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  width: 500px; /* Fixed width to match login container */
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 63, 127, 0.15);
+  border: 1px solid #e1ecf7;
   text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Welcome message section */
+/* Metro Vancouver blue welcome section */
 .welcome-section {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .welcome-section h2 {
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 2em;
+  color: #003f7f;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .welcome-section p {
-  color: #666;
-  font-size: 14px;
+  color: #004080;
+  margin: 0;
 }
 
-/* Logout button styling */
+/* Metro Vancouver styled logout button */
 .logout-btn {
-  padding: 12px 24px;
-  background-color: #dc3545;
+  padding: 0.75rem 1.5rem;
+  background-color: #c73e39;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logout-btn:hover {
-  background-color: #c82333;
+  background-color: #a32e29;
 }
 </style>

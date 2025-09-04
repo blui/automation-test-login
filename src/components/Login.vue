@@ -1,21 +1,18 @@
 <template>
   <!-- Main login form container -->
   <div class="login-container" data-testid="login-form">
-    <h2 data-testid="login-title">Login</h2>
+    <h2 data-testid="login-title">QA Tester Login Test App</h2>
 
     <!-- Login form with validation -->
     <form @submit.prevent="handleLogin" data-testid="login-form-element">
       <!-- Username/Email input field -->
       <div class="form-group">
-        <label for="username" data-testid="username-label"
-          >Username (Email)</label
-        >
         <input
           type="email"
           id="username"
           data-testid="username-input"
           v-model="username"
-          placeholder="Enter your email address"
+          placeholder="Username (email)"
           :disabled="isLoading"
         />
         <!-- Username validation error message -->
@@ -26,13 +23,12 @@
 
       <!-- Password input field -->
       <div class="form-group">
-        <label for="password" data-testid="password-label">Password</label>
         <input
           type="password"
           id="password"
           data-testid="password-input"
           v-model="password"
-          placeholder="Enter your password"
+          placeholder="Password"
           :disabled="isLoading"
         />
         <!-- Password validation error message -->
@@ -214,103 +210,105 @@ export default {
 </script>
 
 <style scoped>
-/* Main login form container */
+/* Metro Vancouver inspired login container */
 .login-container {
-  width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  border: 1px solid #ddd;
+  width: 500px; /* Fixed width - no max-width */
+  padding: 2rem;
+  background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 63, 127, 0.15);
+  border: 1px solid #e1ecf7;
+  min-height: 500px; /* Fixed height to prevent resizing */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Form field grouping */
+.login-container h2 {
+  text-align: center;
+  color: #003f7f;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Metro Vancouver blue form styling */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  height: 80px; /* Fixed height to prevent jumping */
 }
 
-/* Form labels */
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Input field styling */
 input {
   width: 100%;
-  padding: 12px;
-  border: 2px solid #ddd;
+  padding: 0.75rem;
+  border: 2px solid #cce0f3;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: 14px;
-  transition: border-color 0.3s;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Input focus state */
 input:focus {
   outline: none;
-  border-color: #42b983;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
-/* Disabled input state */
 input:disabled {
-  background-color: #f5f5f5;
+  background-color: #f8fafe;
   cursor: not-allowed;
 }
 
-/* Submit button styling */
+/* Metro Vancouver blue button styling */
 button {
   width: 100%;
-  padding: 12px;
-  background-color: #42b983;
+  padding: 0.75rem;
+  background-color: #0066cc;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Button hover state (only when enabled) */
 button:hover:not(:disabled) {
-  background-color: #369f77;
+  background-color: #0052a3;
 }
 
-/* Disabled button state */
 button:disabled {
-  background-color: #ccc;
+  background-color: #b3d1f0;
   cursor: not-allowed;
 }
 
-/* Loading button state */
 button.loading {
-  background-color: #999;
+  background-color: #6699d6;
 }
 
-/* Error message styling */
+/* Error styling with Metro Vancouver accent */
 .error {
-  color: #dc3545;
-  margin-top: 8px;
-  font-size: 14px;
-  line-height: 1.4;
+  color: #c73e39;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  height: 20px; /* Fixed height for error messages */
 }
 
-/* Test credentials display box */
+/* Metro Vancouver styled test credentials box */
 .test-credentials {
-  margin-top: 30px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f0f7ff;
+  border: 1px solid #b3d1f0;
   border-radius: 4px;
-  font-size: 12px;
-  color: #6c757d;
+  font-size: 0.875rem;
+  color: #004080;
 }
 
 .test-credentials p {
-  margin: 5px 0;
+  margin: 0.5rem 0;
+}
+
+.test-credentials p:first-child {
+  font-weight: 600;
+  color: #003f7f;
 }
 </style>

@@ -34,79 +34,16 @@ const handleLogout = () => {
 </script>
 
 <template>
-  <!-- Main application container -->
-  <div class="app" data-testid="app">
-    <!-- Application header -->
-    <header class="app-header" data-testid="app-header">
-      <h1>Test Login Application</h1>
-    </header>
-
-    <!-- Main content area - shows Login or Dashboard based on authentication state -->
-    <main class="main-content" data-testid="main-content">
-      <!-- Login view - shown when user is not authenticated -->
-      <Login
-        v-if="!loggedIn"
-        @login-success="handleLoginSuccess"
-        data-testid="login-view"
-      />
-
-      <!-- Dashboard view - shown when user is authenticated -->
-      <Dashboard
-        v-else
-        :username="username"
-        @logout="handleLogout"
-        data-testid="dashboard-view"
-      />
-    </main>
-
-    <!-- Application footer -->
-    <footer class="app-footer" data-testid="app-footer">
-      <p>QA Interview Test Application</p>
-    </footer>
+  <div id="app">
+    <Login v-if="!loggedIn" @login-success="handleLoginSuccess" />
+    <Dashboard v-else :username="username" @logout="handleLogout" />
   </div>
 </template>
-
 <style scoped>
-/* Main application layout */
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-}
-
-/* Application header styling */
-.app-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px;
+#app {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-}
-
-.app-header h1 {
-  margin: 0;
-  font-size: 1.5em;
-}
-
-/* Main content area - takes remaining space and centers content */
-.main-content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8f9fa;
-}
-
-/* Application footer styling */
-.app-footer {
-  background-color: #6c757d;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.app-footer p {
-  margin: 0;
+  color: #003f7f;
+  margin-top: 60px;
 }
 </style>
