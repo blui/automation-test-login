@@ -311,4 +311,29 @@ button.loading {
   font-weight: 600;
   color: #003f7f;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
 </style>

@@ -99,4 +99,29 @@ export default {
 .logout-btn:hover {
   background-color: #a32e29;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.9rem;
+  }
+}
 </style>
